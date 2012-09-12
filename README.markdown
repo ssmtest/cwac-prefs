@@ -109,7 +109,7 @@ you should not need SQLCipher for Android.
 
 Version
 -------
-This is version v0.0.1 of this module, meaning that this is a proof
+This is version v0.0.2 of this module, meaning that this is a proof
 of concept, seeking input from interested parties.
 
 Demo
@@ -165,6 +165,7 @@ and stack traces if you are encountering crashes.
 
 Release Notes
 -------------
+* v0.0.2: minor issue fixes
 * v0.0.1: Initial import
 
 Who Made This?
