@@ -15,6 +15,7 @@
 package com.commonsware.cwac.prefs;
 
 import android.content.Context;
+import java.io.File;
 import java.util.Collection;
 import java.util.Map;
 import com.commonsware.cwac.prefs.CWSharedPreferences.LoadPolicy;
@@ -25,6 +26,12 @@ public class SQLCipherStrategy extends AbstractSQLStrategy implements
     CWSharedPreferences.StorageStrategy {
   private SQLiteDatabase db=null;
 
+  public static boolean exists(Context ctxt, String key) {
+    File path=ctxt.getDatabasePath(key);
+    
+    return(path.exists());
+  }
+  
   public SQLCipherStrategy(Context ctxt, String key, String password,
                            LoadPolicy loadPolicy) {
     super(loadPolicy);
