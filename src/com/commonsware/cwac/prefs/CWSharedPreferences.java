@@ -45,6 +45,19 @@ public class CWSharedPreferences implements SharedPreferences {
 
         return(sp);
       }
+      else {
+        strategy.close();
+      }
+    }
+
+    return(sp);
+  }
+
+  static public SharedPreferences getInstance(String key) {
+    CWSharedPreferences sp=null;
+
+    synchronized(prefsRoster) {
+      sp=prefsRoster.get(key);
     }
 
     return(sp);
