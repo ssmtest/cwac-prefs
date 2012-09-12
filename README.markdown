@@ -14,8 +14,10 @@ Note that if you wish to use the JAR *and* use the encrypted
 preferences, you will also need a compatible edition of SQLCipher for Android.
 
 The project itself is set up as an Android library project,
-in case you wish to use the source code in that fashion, though then
-you will also need SQLCipher for Android.
+in case you wish to use the source code in that fashion. However, you will still
+need to make a copy of the contents of the library's `assets/` directory in your
+project, as assets are not automatically shared from a library project to its
+host.
 
 Usage
 -----
