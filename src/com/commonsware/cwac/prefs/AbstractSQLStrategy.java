@@ -144,5 +144,7 @@ abstract public class AbstractSQLStrategy implements StorageStrategy {
 
       cache.put(key, value);
     }
+    
+    c.close();
   }
 }
