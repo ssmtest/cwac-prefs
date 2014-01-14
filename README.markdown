@@ -9,7 +9,7 @@ interface, one where you can supply a strategy object to define how
 the values should be loaded and persisted. Built-in strategies support
 storing the values in SQLite, or encrypted in SQLCipher for Android.
 
-This is available as a debug JAR file from the downloads area of this GitHub repo.
+This is [available as a debug JAR file](https://github.com/commonsguy/downloads).
 Note that if you wish to use the JAR *and* use the encrypted
 preferences, you will also need a compatible edition of SQLCipher for Android.
 
