@@ -27,6 +27,7 @@ public class SQLiteStrategy extends AbstractSQLStrategy implements
 
   public SQLiteStrategy(Context ctxt, String key, LoadPolicy loadPolicy) {
     super(loadPolicy);
+    
     this.key=key;
     helper=new Helper(ctxt, key);
   }

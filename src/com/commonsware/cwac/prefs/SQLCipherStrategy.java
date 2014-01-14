@@ -28,13 +28,15 @@ public class SQLCipherStrategy extends AbstractSQLStrategy implements
 
   public static boolean exists(Context ctxt, String key) {
     File path=ctxt.getDatabasePath(key);
-    
+
     return(path.exists());
   }
-  
+
   public SQLCipherStrategy(Context ctxt, String key, String password,
                            LoadPolicy loadPolicy) {
     super(loadPolicy);
+
+    this.key=key;
     SQLiteDatabase.loadLibs(ctxt);
     db=new Helper(ctxt, key).getWritableDatabase(password);
   }
