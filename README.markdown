@@ -167,6 +167,7 @@ and stack traces if you are encountering crashes.
 
 Release Notes
 -------------
+* v0.0.3: bug fixes
 * v0.0.2: minor issue fixes
 * v0.0.1: Initial import
 
