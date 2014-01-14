@@ -86,14 +86,18 @@
          In all cases you must update the value of version-tag below to read 'custom' instead of an integer,
          in order to avoid having your file be overridden by tools such as "android update project"
     -->
-    <!-- version-tag: 1 -->
+    <!-- version-tag: custom -->
     <import file="${sdk.dir}/tools/ant/build.xml" />
 
-  <target name="jar" depends="debug">
-      <jar
-          destfile="bin/CWAC-Prefs.jar"
-          basedir="bin/classes"
-      />
-  </target>
+	<target name="jar" depends="release">
+		<delete file="bin/CWAC-Prefs.jar" />
+    <jar destfile="bin/CWAC-Prefs.jar">
+      <fileset dir="bin/classes">
+        <exclude name="**/BuildConfig.class" />
+        <exclude name="**/R.class" />
+        <exclude name="**/R$*.class" />
+      </fileset>
+    </jar>
+	</target>
 
 </project>
